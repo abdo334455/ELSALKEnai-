@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursing Care Plan App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6E48AA; /* بنفسجي */
+            background-image: linear-gradient(to bottom right, #6E48AA, #0077C0); /* انتقال للأزرق */
+            background-attachment: fixed;
+            overflow: hidden; /* تجنب التمدد للخلف */
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: transparent; /* تمييز الخلفية */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: slideIn 1s forwards;
+        }
+        h1 {
+            color: #fff; /* الأبيض */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #fff; /* الأبيض */
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 12px 24px;
+            background-color: #007bff; /* أزرق */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3; /* أزرق داكن */
+        }
+        
+        /* رسم متحرك */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to the Nursing Care Plan App</h1>
+    <p>Nursing is a profession within the healthcare sector focused on the care of individuals, families, and communities so they may attain, maintain, or recover optimal health and quality of life.</p>
+    <p>Click the button below to start making a nursing care plan.</p>
+    <button onclick="startNursingCarePlan()">Start Making a Nursing Care Plan</button>
+</div>
+
+<!-- Embedded App -->
+<div id="embedded-app" style="display: none;">
+    <iframe src="https://udify.app/chatbot/beDvTddjdt3qI9bO" style="width: 100%; height: 100%; min-height: 700px" frameborder="0" allow="microphone"></iframe>
+</div>
+
+<script>
+    // Function to start making a nursing care plan
+    function startNursingCarePlan() {
+        // Show the embedded app
+        document.getElementById('embedded-app').style.display = 'block';
+        // Hide the button to start making a nursing care plan
+        document.getElementsByClassName('container')[0].style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
